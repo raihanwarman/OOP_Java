@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<JDepend>
+    <Packages>
+
+        <Package name="controller">
+            <Stats>
+                <TotalClasses>1</TotalClasses>
+                <ConcreteClasses>1</ConcreteClasses>
+                <AbstractClasses>0</AbstractClasses>
+                <Ca>1</Ca>
+                <Ce>6</Ce>
+                <A>0</A>
+                <I>0.86</I>
+                <D>0.14</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="Pencipta.java">
+                    controller.Pencipta
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>java.io</Package>
+                <Package>java.lang</Package>
+                <Package>java.nio.charset</Package>
+                <Package>java.nio.file</Package>
+                <Package>java.util</Package>
+                <Package>model</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>view</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="java.awt">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="java.awt.event">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="java.io">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="java.lang">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="java.nio.charset">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="java.nio.file">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="java.util">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="javax.swing">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="model">
+            <Stats>
+                <TotalClasses>6</TotalClasses>
+                <ConcreteClasses>4</ConcreteClasses>
+                <AbstractClasses>2</AbstractClasses>
+                <Ca>2</Ca>
+                <Ce>1</Ce>
+                <A>0.33</A>
+                <I>0.33</I>
+                <D>0.33</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+                <Class sourceFile="Hewan.java">
+                    model.Hewan
+                </Class>
+                <Class sourceFile="Mahluk.java">
+                    model.Mahluk
+                </Class>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="Herbivor.java">
+                    model.Herbivor
+                </Class>
+                <Class sourceFile="Karnivor.java">
+                    model.Karnivor
+                </Class>
+                <Class sourceFile="Manusia.java">
+                    model.Manusia
+                </Class>
+                <Class sourceFile="Tumbuhan.java">
+                    model.Tumbuhan
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>java.lang</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>controller</Package>
+                <Package>view</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="view">
+            <Stats>
+                <TotalClasses>2</TotalClasses>
+                <ConcreteClasses>2</ConcreteClasses>
+                <AbstractClasses>0</AbstractClasses>
+                <Ca>0</Ca>
+                <Ce>8</Ce>
+                <A>0</A>
+                <I>1</I>
+                <D>0</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="AntarmukaSwing.java">
+                    view.AntarmukaSwing
+                </Class>
+                <Class sourceFile="Dunia.java">
+                    view.Dunia
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>controller</Package>
+                <Package>java.awt</Package>
+                <Package>java.awt.event</Package>
+                <Package>java.io</Package>
+                <Package>java.lang</Package>
+                <Package>java.util</Package>
+                <Package>javax.swing</Package>
+                <Package>model</Package>
+            </DependsUpon>
+
+            <UsedBy>
+            </UsedBy>
+        </Package>
+    </Packages>
+
+    <Cycles>
+    </Cycles>
+</JDepend>

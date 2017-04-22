@@ -1,0 +1,94 @@
+
+digraph g {
+        graph [
+	    rankdir = "LR"
+	];
+	node [
+	    fontsize = "12"
+	    fontname = "Courier"
+	    shape = "ellipse"
+	];
+	edge[];
+	"controller" [
+        label="controller | Total Classes: 1"
+	shape="record"
+	color=".99 0.14 .9"
+	style=filled
+    ];
+    "controller" -> "java.io"
+    "controller" -> "java.lang"
+    "controller" -> "java.nio.charset"
+    "controller" -> "java.nio.file"
+    "controller" -> "java.util"
+    "controller" -> "model"
+    "java.awt" [
+        label="java.awt | Total Classes: "
+	shape="record"
+	color=".99 0.0 .9"
+	style=filled
+    ];
+    "java.awt.event" [
+        label="java.awt.event | Total Classes: "
+	shape="record"
+	color=".99 0.0 .9"
+	style=filled
+    ];
+    "java.io" [
+        label="java.io | Total Classes: "
+	shape="record"
+	color=".99 0.0 .9"
+	style=filled
+    ];
+    "java.lang" [
+        label="java.lang | Total Classes: "
+	shape="record"
+	color=".99 0.0 .9"
+	style=filled
+    ];
+    "java.nio.charset" [
+        label="java.nio.charset | Total Classes: "
+	shape="record"
+	color=".99 0.0 .9"
+	style=filled
+    ];
+    "java.nio.file" [
+        label="java.nio.file | Total Classes: "
+	shape="record"
+	color=".99 0.0 .9"
+	style=filled
+    ];
+    "java.util" [
+        label="java.util | Total Classes: "
+	shape="record"
+	color=".99 0.0 .9"
+	style=filled
+    ];
+    "javax.swing" [
+        label="javax.swing | Total Classes: "
+	shape="record"
+	color=".99 0.0 .9"
+	style=filled
+    ];
+    "model" [
+        label="model | Total Classes: 6"
+	shape="record"
+	color=".99 0.33 .9"
+	style=filled
+    ];
+    "model" -> "java.lang"
+    "view" [
+        label="view | Total Classes: 2"
+	shape="record"
+	color=".99 0 .9"
+	style=filled
+    ];
+    "view" -> "controller"
+    "view" -> "java.awt"
+    "view" -> "java.awt.event"
+    "view" -> "java.io"
+    "view" -> "java.lang"
+    "view" -> "java.util"
+    "view" -> "javax.swing"
+    "view" -> "model"
+    
+}
