@@ -2,25 +2,25 @@ package model;
 /**
    * @author Raihan Maulana Warman/13514076
 */
-public class Herbivor extends Hewan {
+public class Chicken extends Hewan {
     /**
-      * Variabel yang menyatakan ketahanan Herbivor.
+      * variabel yang menyatakan besar kekuatan sementara.
+      * dari seekor karnivor
     */
-    private int armor;
+    private boolean criticalHit;
 
     /**
-      * Konstruktor Herbivor.
+    * Konstruktor karnivor.
     */
-    public Herbivor() {
-        //CHECK:OFF: MagicNumber
+    public Chicken() {
         posX = (int) (Math.random() * 40);
         posY = (int) (Math.random() * 70);
-        armor = 5;
+        criticalHit = true;
         umur = 50;
         kecepatanx = 1;
-        kecepatany = 1;
-        kekuatan = 7;
-        symbol = 'H';
+        kecepatany = 0;
+        kekuatan = 9;
+        symbol = 'C';
         lamaMenujuMati = 5;
     }
 
@@ -42,18 +42,17 @@ public class Herbivor extends Hewan {
     }
 
     /**
-      * Fungsi untuk mengembalikan simbol Mahluk.
-      * @return : simbol Mahluk
+    * Fungsi untuk mengembalikan simbol Mahluk.
+    * @return simbol Mahluk
     */
     public final char getSymbol() {
-            return symbol;
+        return symbol;
     }
 
     /**
-      * Prosedur untuk mengubah posisi X,Y dari Mahluk.
+    * Prosedur untuk mengubah posisi X,Y dari Mahluk.
     */
     public final void move() {
-        //CHECK:OFF: MagicNumber
         while (umur > 0 && !selesai) {
             umur--;
             posX += kecepatanx + BARIS;
@@ -70,18 +69,24 @@ public class Herbivor extends Hewan {
     }
 
     /**
-      * Fungsi untuk mengembalikan nilai armor.
-      * @return : nilai armor Herbivor
+    * Fungsi untuk mengembalikan critical hit.
+    * @return : nilai critical hit
     */
-    public final int getArmor() {
-            return armor;
+    public final boolean getCriticalHit() {
+        return criticalHit;
     }
 
     /**
-     * Prosedur animasi mati Mahluk.
+      * Prosedur untuk memberikan nilai false ke critical hit.
+    */
+    public final void lostCriticalHit() {
+        criticalHit = false;
+    }
+
+    /**
+      * Prosedur animasi mati Mahluk.
     */
     public final void mati() {
-        //CHECKSTYLE:OFF
         umur = 0;
         while (lamaMenujuMati > 0) {
             lamaMenujuMati--;
@@ -114,7 +119,7 @@ public class Herbivor extends Hewan {
       * @param u : paramter untuk memberikan nilai umur nantinya
     */
     public final void setUmur(final int u) {
-            umur = u;
+        umur = u;
     }
 
     /**
@@ -122,31 +127,31 @@ public class Herbivor extends Hewan {
       * @return : nilai posX
     */
     public final int getPositionX() {
-            return posX;
+        return posX;
     }
 
     /**
-      * Fungsi untuk mengembalikan nilai posisi Y.
-      * @return : nilai posY
+    * Fungsi untuk mengembalikan nilai posisi Y.
+    * @return : nilai posY
     */
     public final int getPositionY() {
         return posY;
     }
 
     /**
-      * Prosedur untuk memberikan nilai selesai.
-      * @param b : parameter untuk memberikan nilai bool selesai
+    * Prosedur untuk memberikan nilai selesai.
+    * @param b : parameter untuk memberikan nilai bool selesai
     */
     public final void setSelesai(final boolean b) {
         selesai = b;
     }
 
     /**
-      * Fungsi untuk mengembalikan nilai selesai.
-      * @return : nilai selesai
+    * Fungsi untuk mengembalikan nilai selesai.
+    * @return : nilai selesai
     */
     public final boolean getSelesai() {
-            return selesai;
+        return selesai;
     }
 
     /**

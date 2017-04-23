@@ -38,149 +38,149 @@ public class HerbivorTest {
     }
 
     /**
-     * Test of delay method, of class Herbivor.
+     * Test of delay method, of class Bird.
      */
     @Test
     public void testDelay() {
         System.out.println("delay");
         int lamaWaktu = 0;
-        Herbivor instance = new Herbivor();
+        Bird instance = new Bird();
         instance.delay(lamaWaktu);
     }
 
     /**
-     * Test of getSymbol method, of class Herbivor.
+     * Test of getSymbol method, of class Bird.
      */
     @Test
     public void testGetSymbol() {
         System.out.println("getSymbol");
-        Herbivor instance = new Herbivor();
+        Bird instance = new Bird();
         char expResult = 'H';
         char result = instance.getSymbol();
         assertEquals(expResult, result);
     }
 
     /**
-     * Test of move method, of class Herbivor.
+     * Test of move method, of class Bird.
      */
     @Test
     public void testMove() {
         System.out.println("move");
-        Herbivor instance = new Herbivor();
+        Bird instance = new Bird();
         instance.move();
     }
 
     /**
-     * Test of getArmor method, of class Herbivor.
+     * Test of getArmor method, of class Bird.
      */
     @Test
     public void testGetArmor() {
         System.out.println("getArmor");
-        Herbivor instance = new Herbivor();
+        Bird instance = new Bird();
         int expResult = 5;
         int result = instance.getArmor();
         assertEquals(expResult, result);
     }
 
     /**
-     * Test of mati method, of class Herbivor.
+     * Test of mati method, of class Bird.
      */
     @Test
     public void testMati() {
         System.out.println("mati");
-        Herbivor instance = new Herbivor();
+        Bird instance = new Bird();
         instance.mati();
     }
 
     /**
-     * Test of getKekuatan method, of class Herbivor.
+     * Test of getKekuatan method, of class Bird.
      */
     @Test
     public void testGetKekuatan() {
         System.out.println("getKekuatan");
-        Herbivor instance = new Herbivor();
+        Bird instance = new Bird();
         int expResult = 7;
         int result = instance.getKekuatan();
         assertEquals(expResult, result);
     }
 
     /**
-     * Test of getUmur method, of class Herbivor.
+     * Test of getUmur method, of class Bird.
      */
     @Test
     public void testGetUmur() {
         System.out.println("getUmur");
-        Herbivor instance = new Herbivor();
+        Bird instance = new Bird();
         int expResult = 50;
         int result = instance.getUmur();
         assertEquals(expResult, result);
     }
 
     /**
-     * Test of setUmur method, of class Herbivor.
+     * Test of setUmur method, of class Bird.
      */
     @Test
     public void testSetUmur() {
         System.out.println("setUmur");
         int u = 0;
-        Herbivor instance = new Herbivor();
+        Bird instance = new Bird();
         instance.setUmur(u);
     }
 
     /**
-     * Test of getPositionX method, of class Herbivor.
+     * Test of getPositionX method, of class Bird.
      */
     @Test
     public void testGetPositionX() {
         System.out.println("getPositionX");
-        Herbivor instance = new Herbivor();
+        Bird instance = new Bird();
         boolean expResult = true;
         int result = instance.getPositionX();
         assertEquals(expResult, result >= 0 && result <= 40);
     }
 
     /**
-     * Test of getPositionY method, of class Herbivor.
+     * Test of getPositionY method, of class Bird.
      */
     @Test
     public void testGetPositionY() {
         System.out.println("getPositionY");
-        Herbivor instance = new Herbivor();
+        Bird instance = new Bird();
         boolean expResult = true;
         int result = instance.getPositionY();
         assertEquals(expResult, result >= 0 && result <= 70);
     }
 
     /**
-     * Test of setSelesai method, of class Herbivor.
+     * Test of setSelesai method, of class Bird.
      */
     @Test
     public void testSetSelesai() {
         System.out.println("setSelesai");
         boolean b = false;
-        Herbivor instance = new Herbivor();
+        Bird instance = new Bird();
         instance.setSelesai(b);
     }
 
     /**
-     * Test of getSelesai method, of class Herbivor.
+     * Test of getSelesai method, of class Bird.
      */
     @Test
     public void testGetSelesai() {
         System.out.println("getSelesai");
-        Herbivor instance = new Herbivor();
+        Bird instance = new Bird();
         boolean expResult = false;
         boolean result = instance.getSelesai();
         assertEquals(expResult, result);
     }
 
     /**
-     * Test of run method, of class Herbivor.
+     * Test of run method, of class Bird.
      */
     @Test
     public void testRun() {
         System.out.println("run");
-        Herbivor instance = new Herbivor();
+        Bird instance = new Bird();
         instance.run();
     }
     

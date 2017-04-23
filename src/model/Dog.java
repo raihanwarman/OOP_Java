@@ -1,31 +1,26 @@
 package model;
 /**
-  * @author Martino Christanto Khuangga/13514084
+   * @author Raihan Maulana Warman/13514076
 */
-public class Manusia extends Mahluk {
+public class Dog extends Hewan {
     /**
-      * Atribut yang menyatakan jenis kelamin.
+      * Variabel yang menyatakan ketahanan Bird.
     */
-    private final boolean jenisKelamin;
+    private int armor;
+
     /**
-      * Konstruktor manusia dengan paramter.
-      * @param gender : parameter untuk menentukan jenis kelamin
+      * Konstruktor Herbivor.
     */
-    public Manusia(final boolean gender) {
+    public Dog() {
+        //CHECK:OFF: MagicNumber
         posX = (int) (Math.random() * 40);
         posY = (int) (Math.random() * 70);
-
-        jenisKelamin = gender;
-        umur = 75;
-        kecepatanx = 1;
-        kecepatany = 1;
-        if (jenisKelamin) {
-            kekuatan = 10;
-            symbol = 'L';
-        } else {
-            kekuatan = 8;
-            symbol = 'P';
-        }
+        armor = 5;
+        umur = 50;
+        kecepatanx = -1;
+        kecepatany = -1;
+        kekuatan = 7;
+        symbol = 'D';
         lamaMenujuMati = 5;
     }
 
@@ -44,6 +39,58 @@ public class Manusia extends Mahluk {
             // you probably want to quit if the thread is interrupted
             return;
         }
+    }
+
+    /**
+      * Fungsi untuk mengembalikan simbol Mahluk.
+      * @return : simbol Mahluk
+    */
+    public final char getSymbol() {
+            return symbol;
+    }
+
+    /**
+      * Prosedur untuk mengubah posisi X,Y dari Mahluk.
+    */
+    public final void move() {
+        //CHECK:OFF: MagicNumber
+        while (umur > 0 && !selesai) {
+            umur--;
+            posX += kecepatanx + BARIS;
+            posX %= BARIS;
+
+            posY += kecepatany + KOLOM;
+            posY %= KOLOM;
+            delay(200);
+            while (pause) {
+                delay(10);
+            }
+        }
+        mati();
+    }
+
+    /**
+      * Fungsi untuk mengembalikan nilai armor.
+      * @return : nilai armor Bird
+    */
+    public final int getArmor() {
+            return armor;
+    }
+
+    /**
+     * Prosedur animasi mati Mahluk.
+    */
+    public final void mati() {
+        //CHECKSTYLE:OFF
+        umur = 0;
+        while (lamaMenujuMati > 0) {
+            lamaMenujuMati--;
+            symbol = Integer.toString(lamaMenujuMati).charAt(0);
+            delay(100);
+        }
+        posX = -1;
+        posY = -1;
+        selesai = true;
     }
 
     /**
@@ -67,7 +114,7 @@ public class Manusia extends Mahluk {
       * @param u : paramter untuk memberikan nilai umur nantinya
     */
     public final void setUmur(final int u) {
-        umur = u;
+            umur = u;
     }
 
     /**
@@ -75,7 +122,7 @@ public class Manusia extends Mahluk {
       * @return : nilai posX
     */
     public final int getPositionX() {
-        return posX;
+            return posX;
     }
 
     /**
@@ -103,60 +150,7 @@ public class Manusia extends Mahluk {
     }
 
     /**
-      * Fungsi untuk mengembalikan simbol Mahluk.
-      * @return : simbol Mahluk
-    */
-    public final char getSymbol() {
-        return symbol;
-    }
-
-/**
-      * Prosedur untuk mengubah posisi X,Y dari Mahluk.
-    */
-    public final void move() {
-        while (umur > 0 && !selesai) {
-            umur--;
-            posX += kecepatanx + BARIS;
-            posX %= BARIS;
-            kecepatanx = (int) (Math.random() * 2) - 1;
-            
-            posY += kecepatany + KOLOM;
-            posY %= KOLOM;
-            kecepatany = (int) (Math.random() * 2) - 1;
-            delay(200);
-            while (pause) {
-                delay(10);
-            }
-        }
-        mati();
-    }
-
-    /**
-      * Prosedur animasi mati Mahluk.
-    */
-    public final void mati() {
-        umur = 0;
-        while (lamaMenujuMati > 0) {
-            lamaMenujuMati--;
-            symbol = Integer.toString(lamaMenujuMati).charAt(0);
-            delay(100);
-        }
-        posX = -1;
-        posY = -1;
-
-        selesai = true;
-    }
-
-    /**
-    * Fungsi untuk mengembalikan jenis kelamin.
-    * @return : mengembalikan boolean jenis kelamin
-    */
-    public final boolean getJenisKelamin() {
-        return jenisKelamin;
-    }
-
-    /**
-    * Sebuah prosedur untuk menjalankan thread.
+      * Sebuah prosedur untuk menjalankan thread.
     */
     public final void run() {
         move();

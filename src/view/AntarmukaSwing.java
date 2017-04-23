@@ -39,10 +39,11 @@ public class AntarmukaSwing extends JPanel implements ActionListener {
   private Timer timer;
 
   /**
-    * variabel konstanta gambar karnivor, herbivor, tumbuhan, manusia
+    * variabel konstanta gambar bird, chicken, cow, dog, duck
+    * elephant, fish, goat, lion
     * laki-laki, dan manusia perempuan.
   */
-  private final Image[] img = new Image[5];
+  private final Image[] img = new Image[9];
 
   /**
     * variabel konstanta gambar laut, daratan, dan pegunungan.
@@ -76,11 +77,15 @@ public class AntarmukaSwing extends JPanel implements ActionListener {
   private AntarmukaSwing() {
     dx = Pencipta.getPencipta();
 
-    img[0] = Toolkit.getDefaultToolkit().getImage("res/p116.png");
-    img[1] = Toolkit.getDefaultToolkit().getImage("res/p216.png");
-    img[2] = Toolkit.getDefaultToolkit().getImage("res/p316.png");
-    img[3] = Toolkit.getDefaultToolkit().getImage("res/p416.png");
-    img[4] = Toolkit.getDefaultToolkit().getImage("res/p516.png");
+    img[0] = Toolkit.getDefaultToolkit().getImage("res/bird.png");
+    img[1] = Toolkit.getDefaultToolkit().getImage("res/chicken.png");
+    img[2] = Toolkit.getDefaultToolkit().getImage("res/cow.png");
+    img[3] = Toolkit.getDefaultToolkit().getImage("res/dog.png");
+    img[4] = Toolkit.getDefaultToolkit().getImage("res/duckling.png");
+    img[5] = Toolkit.getDefaultToolkit().getImage("res/elephant.png");
+    img[6] = Toolkit.getDefaultToolkit().getImage("res/fish.png");
+    img[7] = Toolkit.getDefaultToolkit().getImage("res/goat.png");
+    img[8] = Toolkit.getDefaultToolkit().getImage("res/lion.png");
 
     imgA[0] = Toolkit.getDefaultToolkit().getImage("res/laut.png");
     imgA[1] = Toolkit.getDefaultToolkit().getImage("res/rumput.png");
@@ -164,11 +169,15 @@ public class AntarmukaSwing extends JPanel implements ActionListener {
             }
           } else {
             switch (c) {
-              case 'L' : g2.drawImage(img[0], j * ukuranPx, i * ukuranPx, this); break;
-              case 'P' : g2.drawImage(img[1], j * ukuranPx, i * ukuranPx, this); break;
-              case 'H' : g2.drawImage(img[2], j * ukuranPx, i * ukuranPx, this); break;
-              case 'K' : g2.drawImage(img[3], j * ukuranPx, i * ukuranPx, this); break;
-              case 'T' : g2.drawImage(img[4], j * ukuranPx, i * ukuranPx, this); break;
+              case 'B' : g2.drawImage(img[0], j * ukuranPx, i * ukuranPx, this); break;
+              case 'C' : g2.drawImage(img[1], j * ukuranPx, i * ukuranPx, this); break;
+              case 'O' : g2.drawImage(img[2], j * ukuranPx, i * ukuranPx, this); break;
+              case 'D' : g2.drawImage(img[3], j * ukuranPx, i * ukuranPx, this); break;
+              case 'U' : g2.drawImage(img[4], j * ukuranPx, i * ukuranPx, this); break;
+              case 'E' : g2.drawImage(img[5], j * ukuranPx, i * ukuranPx, this); break;
+              case 'F' : g2.drawImage(img[6], j * ukuranPx, i * ukuranPx, this); break;
+              case 'G' : g2.drawImage(img[7], j * ukuranPx, i * ukuranPx, this); break;
+              case 'L' : g2.drawImage(img[8], j * ukuranPx, i * ukuranPx, this); break;
               default : assert false : c; break;
             }
           }

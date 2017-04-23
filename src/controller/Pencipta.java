@@ -5,11 +5,7 @@ import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.io.IOException;
-import model.Mahluk;
-import model.Herbivor;
-import model.Karnivor;
-import model.Manusia;
-import model.Tumbuhan;
+import model.*;
 
 /**
   * Kelas yang menciptakan mahluk.
@@ -76,12 +72,21 @@ public class Pencipta extends Thread {
         for (int i = 0; i < 60; ++i) {
             Ciptakan('t');
         }
-        for (int i = 0; i < 10; ++i) {
-            Ciptakan('h');
-            Ciptakan('p');
-            Ciptakan('l');
-            Ciptakan('k');
-        }
+//        for (int i = 0; i < 5; ++i) {
+//            Ciptakan('b');
+//            Ciptakan('c');
+//            Ciptakan('o');
+//            Ciptakan('d');
+//        }
+        Ciptakan('b');
+        Ciptakan('c');
+        Ciptakan('o');
+        Ciptakan('d');
+        Ciptakan('u');
+        Ciptakan('e');
+        Ciptakan('f');
+        Ciptakan('g');
+        Ciptakan('l');
     }
 
     /**
@@ -104,7 +109,7 @@ public class Pencipta extends Thread {
     /**
       * Prosedur untuk menciptakan Mahluk.
       * @param x : kode untuk menentukan alokasi Mahluk
-      * (Manusia, Tumbuhan, Karnivor, atau Herbivor)
+ (Manusia, Tumbuhan, Chicken, atau Bird)
       * @author Rio Chandra Rajagukguk/13514082
     */
     public final void Ciptakan(final char x) {
@@ -113,17 +118,32 @@ public class Pencipta extends Thread {
             case 't' :
                 st_list.add(new Tumbuhan());
                 break;
+            case 'b' :
+                st_list.add(new Bird());
+                break;
+            case 'c' :
+                st_list.add(new Chicken());
+                break;
+            case 'o' :
+                st_list.add(new Cow());
+                break;
+            case 'd' :
+                st_list.add(new Dog());
+                break;
+            case 'u' :
+                st_list.add(new Duck());
+                break;
+            case 'e' :
+                st_list.add(new Elephant());
+                break;
+            case 'f' :
+                st_list.add(new Fish());
+                break;
+            case 'g' :
+                st_list.add(new Goat());
+                break;
             case 'l' :
-                st_list.add(new Manusia(true));
-                break;
-            case 'p' :
-                st_list.add(new Manusia(false));
-                break;
-            case 'h' :
-                st_list.add(new Herbivor());
-                break;
-            case 'k' :
-                st_list.add(new Karnivor());
+                st_list.add(new Lion());
                 break;
             default :
                 st_list.add(new Tumbuhan());
