@@ -19,7 +19,7 @@ public class Lion extends Hewan {
         umur = 50;
         kecepatanx = 1;
         kecepatany = 1;
-        kekuatan = 7;
+        kekuatan = 3;
         symbol = 'H';
         lamaMenujuMati = 5;
     }
@@ -83,11 +83,11 @@ public class Lion extends Hewan {
     public final void mati() {
         //CHECKSTYLE:OFF
         umur = 0;
-        while (lamaMenujuMati > 0) {
-            lamaMenujuMati--;
-            symbol = Integer.toString(lamaMenujuMati).charAt(0);
-            delay(100);
-        }
+//        while (lamaMenujuMati > 0) {
+//            lamaMenujuMati--;
+//            symbol = Integer.toString(lamaMenujuMati).charAt(0);
+//            delay(500);
+//        }
         posX = -1;
         posY = -1;
         selesai = true;

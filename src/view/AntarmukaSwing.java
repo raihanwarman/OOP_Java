@@ -11,7 +11,9 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 import controller.Pencipta;
+import java.awt.*;
 import model.Mahluk;
+import model.Player;
 
 /**
  * Sebuah kelas untuk menampilkan antarmuka.
@@ -41,9 +43,9 @@ public class AntarmukaSwing extends JPanel implements ActionListener {
   /**
     * variabel konstanta gambar bird, chicken, cow, dog, duck
     * elephant, fish, goat, lion
-    * laki-laki, dan manusia perempuan.
+    * 
   */
-  private final Image[] img = new Image[9];
+  private final Image[] img = new Image[10];
 
   /**
     * variabel konstanta gambar laut, daratan, dan pegunungan.
@@ -69,13 +71,15 @@ public class AntarmukaSwing extends JPanel implements ActionListener {
    * Konstanta ukuran pixel gambar.
    */
   private final int ukuranPx = 16;
-
+  
+  private Player player;
   /**
     * Konstruktor dunia singleton.
     * @author Verisky Mega Jaya/13514018
   */
   private AntarmukaSwing() {
     dx = Pencipta.getPencipta();
+    player = Player.getPlayer();
 
     img[0] = Toolkit.getDefaultToolkit().getImage("res/bird.png");
     img[1] = Toolkit.getDefaultToolkit().getImage("res/chicken.png");
@@ -86,6 +90,7 @@ public class AntarmukaSwing extends JPanel implements ActionListener {
     img[6] = Toolkit.getDefaultToolkit().getImage("res/fish.png");
     img[7] = Toolkit.getDefaultToolkit().getImage("res/goat.png");
     img[8] = Toolkit.getDefaultToolkit().getImage("res/lion.png");
+    img[9] = Toolkit.getDefaultToolkit().getImage("res/p116.png");
 
     imgA[0] = Toolkit.getDefaultToolkit().getImage("res/laut.png");
     imgA[1] = Toolkit.getDefaultToolkit().getImage("res/rumput.png");
@@ -178,12 +183,17 @@ public class AntarmukaSwing extends JPanel implements ActionListener {
               case 'F' : g2.drawImage(img[6], j * ukuranPx, i * ukuranPx, this); break;
               case 'G' : g2.drawImage(img[7], j * ukuranPx, i * ukuranPx, this); break;
               case 'L' : g2.drawImage(img[8], j * ukuranPx, i * ukuranPx, this); break;
+              case 'P' : g2.drawImage(img[9], j * ukuranPx, i * ukuranPx, this); break;
               default : assert false : c; break;
             }
           }
         }
       }
     }
+    Font font = new Font("Serif", Font.PLAIN, 36);
+    g2.setFont(font);
+    g2.setColor(Color.WHITE);
+    g2.drawString("SCORE: "+Integer.toString(player.getScore()),50,50);
   }
 
   /**

@@ -69,9 +69,9 @@ public class Pencipta extends Thread {
         st_banyakObjek = 0;
         st_selesai = false;
         resetKe0MatriksBanyakYangMenempati();
-        for (int i = 0; i < 60; ++i) {
-            Ciptakan('t');
-        }
+//        for (int i = 0; i < 60; ++i) {
+//            Ciptakan('t');
+//        }
 //        for (int i = 0; i < 5; ++i) {
 //            Ciptakan('b');
 //            Ciptakan('c');
@@ -87,6 +87,7 @@ public class Pencipta extends Thread {
         Ciptakan('f');
         Ciptakan('g');
         Ciptakan('l');
+        Ciptakan('p');
     }
 
     /**
@@ -109,7 +110,7 @@ public class Pencipta extends Thread {
     /**
       * Prosedur untuk menciptakan Mahluk.
       * @param x : kode untuk menentukan alokasi Mahluk
- (Manusia, Tumbuhan, Chicken, atau Bird)
+        (Manusia, Tumbuhan, Chicken, atau Bird)
       * @author Rio Chandra Rajagukguk/13514082
     */
     public final void Ciptakan(final char x) {
@@ -145,6 +146,9 @@ public class Pencipta extends Thread {
             case 'l' :
                 st_list.add(new Lion());
                 break;
+            case 'p' :
+                st_list.add(Player.getPlayer());
+                break;
             default :
                 st_list.add(new Tumbuhan());
                 break;
@@ -175,9 +179,18 @@ public class Pencipta extends Thread {
                     }
                     ++i;
                 }
-                if (st_banyakObjek == 0) {
-                    delay(500);
-                    st_selesai = true;
+                if (st_banyakObjek == 1) {
+                    delay(3);
+//                    st_selesai = true;
+                    Ciptakan('b');
+                    Ciptakan('c');
+                    Ciptakan('o');
+                    Ciptakan('d');
+                    Ciptakan('u');
+                    Ciptakan('e');
+                    Ciptakan('f');
+                    Ciptakan('g');
+                    Ciptakan('l');
                 }
             }
             delay(100);

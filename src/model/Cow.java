@@ -19,7 +19,7 @@ public class Cow extends Hewan {
         umur = 50;
         kecepatanx = -1;
         kecepatany = 1;
-        kekuatan = 7;
+        kekuatan = 1;
         symbol = 'O';
         lamaMenujuMati = 5;
     }
@@ -61,7 +61,7 @@ public class Cow extends Hewan {
 
             posY += kecepatany + KOLOM;
             posY %= KOLOM;
-            delay(200);
+            delay(1500);
             while (pause) {
                 delay(10);
             }
@@ -83,11 +83,11 @@ public class Cow extends Hewan {
     public final void mati() {
         //CHECKSTYLE:OFF
         umur = 0;
-        while (lamaMenujuMati > 0) {
-            lamaMenujuMati--;
-            symbol = Integer.toString(lamaMenujuMati).charAt(0);
-            delay(100);
-        }
+//        while (lamaMenujuMati > 0) {
+//            lamaMenujuMati--;
+//            symbol = Integer.toString(lamaMenujuMati).charAt(0);
+//            delay(100);
+//        }
         posX = -1;
         posY = -1;
         selesai = true;

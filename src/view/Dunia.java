@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import javax.swing.JFrame;
 import controller.Pencipta;
 import model.Mahluk;
+import model.Player;
 
 /**
   * Kelas yang merupakan tempat hidup mahluk.
@@ -27,6 +28,10 @@ public class Dunia extends Thread {
     private final Pencipta dx;
 
     /**
+     * variabel player dalam satu dunia.
+     */
+    private final Player player;
+    /**
      * variabel konstanta GUI.
     */
     private final AntarmukaSwing gui;
@@ -46,7 +51,7 @@ public class Dunia extends Thread {
     frame.setLocationRelativeTo(null);
     frame.setVisible(true);
     dx = Pencipta.getPencipta();
-
+    player = Player.getPlayer();
     cetakMatriks();
     }
 
@@ -140,6 +145,11 @@ public class Dunia extends Thread {
         int angkaDelay = 100;
         while (!dx.getSelesai()) {
             cetakMatriks();
+            if (player.getSelesai()) {
+                dx.setSelesai(true);
+                dx.pauseMahluk();
+            }
+            System.out.println(player.getScore());
             delay(angkaDelay);
         }
         gameOver();
@@ -149,9 +159,10 @@ public class Dunia extends Thread {
     *Mencetak matriks.
     * @author Rio Chandra Rajagukguk/13514082
     */
-    public final void cetakMatriks() {
+    public synchronized final void cetakMatriks() {
         for (int i = 0; i < BARIS; i++) {
             for (int j = 0; j < KOLOM; j++) {
+                
                 int p = dx.getMatriksBanyakYangMenempati(i, j);
 
                 if (p > 1) {
@@ -159,8 +170,14 @@ public class Dunia extends Thread {
                     MahlukdiXY = cariSemuadiXY(i, j);
                     int indeksMahlukTerkuat = cariIndeksListKekuatanTertinggi(i,
                             j, MahlukdiXY);
+                    if (MahlukdiXY.get(indeksMahlukTerkuat) instanceof Player) {
+                        player.addScore(1);
+                    }
                     for (int k = 0; k < MahlukdiXY.size(); k++) {
                         if (k != indeksMahlukTerkuat) {
+                            if (MahlukdiXY.get(k) instanceof Player) {
+                                player.mati();
+                            }
                             int akanDihapus = cariIndeksListDiPosisiXYdanUmur(i,
                                     j, MahlukdiXY.get(k).getUmur());
                             if (akanDihapus > -1) {

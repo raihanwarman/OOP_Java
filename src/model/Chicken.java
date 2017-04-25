@@ -19,7 +19,7 @@ public class Chicken extends Hewan {
         umur = 50;
         kecepatanx = 1;
         kecepatany = 0;
-        kekuatan = 9;
+        kekuatan = 1;
         symbol = 'C';
         lamaMenujuMati = 5;
     }
@@ -88,11 +88,11 @@ public class Chicken extends Hewan {
     */
     public final void mati() {
         umur = 0;
-        while (lamaMenujuMati > 0) {
-            lamaMenujuMati--;
-            symbol = Integer.toString(lamaMenujuMati).charAt(0);
-            delay(100);
-        }
+//        while (lamaMenujuMati > 0) {
+//            lamaMenujuMati--;
+//            symbol = Integer.toString(lamaMenujuMati).charAt(0);
+//            delay(1500);
+//        }
         posX = -1;
         posY = -1;
         selesai = true;
