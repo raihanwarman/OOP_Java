@@ -1,6 +1,6 @@
 package model;
 /**
-  * @author Martino Christanto Khuangga/13514084
+  * @author Hasna Nur Karimah/13514106
 */
 public class Manusia extends Mahluk {
     /**
