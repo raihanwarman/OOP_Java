@@ -145,6 +145,9 @@ public class Pencipta extends Thread {
             case 'l' :
                 st_list.add(new Lion());
                 break;
+            case 'm' :
+                st_list.add(new Manusia(true));
+                break;
             default :
                 st_list.add(new Tumbuhan());
                 break;

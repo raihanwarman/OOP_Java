@@ -3,16 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/WIN%2010/Documents/OOP/OOP_Java-master/src/controller/JButtonListener.java</file>
-            <file>file:/C:/Users/WIN%2010/Documents/OOP/OOP_Java-master/src/model/Herbivor.java</file>
-            <file>file:/C:/Users/WIN%2010/Documents/OOP/OOP_Java-master/src/main/Main.java</file>
-            <file>file:/C:/Users/WIN%2010/Documents/OOP/OOP_Java-master/src/view/Dunia.java</file>
-            <file>file:/C:/Users/WIN%2010/Documents/OOP/OOP_Java-master/src/model/Hewan.java</file>
-            <file>file:/C:/Users/WIN%2010/Documents/OOP/OOP_Java-master/test/view/AntarmukaSwingTest.java</file>
-            <file>file:/C:/Users/WIN%2010/Documents/OOP/OOP_Java-master/src/view/AntarmukaSwing.java</file>
-            <file>file:/C:/Users/WIN%2010/Documents/OOP/OOP_Java-master/src/controller/Pencipta.java</file>
-            <file>file:/C:/Users/WIN%2010/Documents/OOP/OOP_Java-master/src/model/Mahluk.java</file>
-            <file>file:/C:/Users/WIN%2010/Documents/OOP/OOP_Java-master/src/main/peta1</file>
+            <file>file:/C:/OOP_Java/src/controller/Pencipta.java</file>
+            <file>file:/C:/OOP_Java/src/main/Main.java</file>
+            <file>file:/C:/OOP_Java/src/view/AntarmukaSwing.java</file>
+            <file>file:/C:/OOP_Java/src/model/Hewan.java</file>
+            <file>file:/C:/OOP_Java/src/model/Manusia.java</file>
+            <file>file:/C:/OOP_Java/test/model/ManusiaTest.java</file>
+            <file>file:/C:/OOP_Java/src/controller/JButtonListener.java</file>
+            <file>file:/C:/OOP_Java/res/peta1</file>
         </group>
     </open-files>
 </project-private>

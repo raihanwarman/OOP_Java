@@ -24,32 +24,29 @@ public class JButtonListener {
     frame = new JFrame("Aptuyu");
 
     // create our jbutton
-    JButton buttonL = new JButton("Laki-Laki");
-    JButton buttonP = new JButton("Perempuan");
-    JButton buttonH = new JButton("Herbivora");
-    JButton buttonK = new JButton("Karnivora");
-    JButton buttonT = new JButton("Tumbuhan");
+    JButton buttonUp = new JButton("^");
+    JButton buttonLeft = new JButton("<");
+    JButton buttonRight = new JButton(">");
+    JButton buttonDown = new JButton("v");
     JButton buttonPause = new JButton("Pause");
+    
+    p.Ciptakan('m');
 
     // add the listener to the jbutton to handle the "pressed" event
-    buttonL.addActionListener((ActionEvent e) -> {
+    buttonUp.addActionListener((ActionEvent e) -> {
         p.Ciptakan('l');
     });
 
-    buttonP.addActionListener((ActionEvent e) -> {
+    buttonLeft.addActionListener((ActionEvent e) -> {
         p.Ciptakan('p');
     });
 
-    buttonH.addActionListener((ActionEvent e) -> {
+    buttonRight.addActionListener((ActionEvent e) -> {
         p.Ciptakan('h');
     });
 
-    buttonK.addActionListener((ActionEvent e) -> {
+    buttonDown.addActionListener((ActionEvent e) -> {
         p.Ciptakan('k');
-    });
-
-    buttonT.addActionListener((ActionEvent e) -> {
-        p.Ciptakan('t');
     });
 
     buttonPause.addActionListener((ActionEvent e) -> {
@@ -58,11 +55,10 @@ public class JButtonListener {
 
     // put the button on the frame
     frame.getContentPane().setLayout(new FlowLayout());
-    frame.add(buttonL);
-    frame.add(buttonP);
-    frame.add(buttonH);
-    frame.add(buttonK);
-    frame.add(buttonT);
+    frame.add(buttonUp);
+    frame.add(buttonLeft);
+    frame.add(buttonRight);
+    frame.add(buttonDown);
     frame.add(buttonPause);
 
     // set up the jframe, then display it

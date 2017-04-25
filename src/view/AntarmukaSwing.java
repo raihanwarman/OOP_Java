@@ -178,6 +178,7 @@ public class AntarmukaSwing extends JPanel implements ActionListener {
               case 'F' : g2.drawImage(img[6], j * ukuranPx, i * ukuranPx, this); break;
               case 'G' : g2.drawImage(img[7], j * ukuranPx, i * ukuranPx, this); break;
               case 'L' : g2.drawImage(img[8], j * ukuranPx, i * ukuranPx, this); break;
+              case 'M' : g2.drawImage(imgA[2], j * ukuranPx, i * ukuranPx, this); break;
               default : assert false : c; break;
             }
           }

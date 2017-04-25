@@ -21,10 +21,10 @@ public class Manusia extends Mahluk {
         kecepatany = 1;
         if (jenisKelamin) {
             kekuatan = 10;
-            symbol = 'L';
+            symbol = 'M';
         } else {
             kekuatan = 8;
-            symbol = 'P';
+            symbol = 'M';
         }
         lamaMenujuMati = 5;
     }
