@@ -60,7 +60,7 @@ public class Chicken extends Hewan {
 
             posY += kecepatany + KOLOM;
             posY %= KOLOM;
-            delay(200);
+            delay(950);
             while (pause) {
                 delay(10);
             }
@@ -88,11 +88,11 @@ public class Chicken extends Hewan {
     */
     public final void mati() {
         umur = 0;
-//        while (lamaMenujuMati > 0) {
-//            lamaMenujuMati--;
-//            symbol = Integer.toString(lamaMenujuMati).charAt(0);
-//            delay(1500);
-//        }
+        while (lamaMenujuMati > 0) {
+            lamaMenujuMati--;
+            symbol = Integer.toString(lamaMenujuMati).charAt(0);
+            delay(50);
+        }
         posX = -1;
         posY = -1;
         selesai = true;

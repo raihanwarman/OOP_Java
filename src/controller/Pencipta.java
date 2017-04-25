@@ -54,7 +54,7 @@ public class Pencipta extends Thread {
       * @param encoding : hasil pembacaan file.
       * @return mengembalikan isi file dalam sebuah string
       * @throws IOException melemparkan IOException jika gagal membaca
-      * @author Rio Chandra Rajagukguk/13514082
+      * @author Nur Latifah Ulfah/13514015
     */
     private String readFile(final String path, final Charset encoding) throws IOException {
       byte[] encoded = Files.readAllBytes(Paths.get(path));
@@ -63,21 +63,13 @@ public class Pencipta extends Thread {
 
     /**
     * konstruktor pencipta.
-    * @author Verisky Mega Jaya/13514018
+    * @author Letivany Aldina/13514067
     */
     private Pencipta() {
         st_banyakObjek = 0;
         st_selesai = false;
         resetKe0MatriksBanyakYangMenempati();
-//        for (int i = 0; i < 60; ++i) {
-//            Ciptakan('t');
-//        }
-//        for (int i = 0; i < 5; ++i) {
-//            Ciptakan('b');
-//            Ciptakan('c');
-//            Ciptakan('o');
-//            Ciptakan('d');
-//        }
+        
         Ciptakan('b');
         Ciptakan('c');
         Ciptakan('o');
@@ -88,13 +80,15 @@ public class Pencipta extends Thread {
         Ciptakan('g');
         Ciptakan('l');
         Ciptakan('p');
+        
+        
     }
 
     /**
       * Sebuah prosedur untuk menghentikan.
       * program selama waktu yang ditentukan
       * @param lamaWaktu : parameter input untuk menentukan lama delay
-      * @author Rio Chandra Rajagukguk/13514082
+      * @author Nur Latifah Ulfah/13514015
     */
     public void delay(final int lamaWaktu) {
         try {
@@ -110,8 +104,8 @@ public class Pencipta extends Thread {
     /**
       * Prosedur untuk menciptakan Mahluk.
       * @param x : kode untuk menentukan alokasi Mahluk
-        (Manusia, Tumbuhan, Chicken, atau Bird)
-      * @author Rio Chandra Rajagukguk/13514082
+      * (Manusia, Tumbuhan, Chicken, atau Bird)
+      * @author Nur Latifah Ulfah/13514015
     */
     public final void Ciptakan(final char x) {
         int i = st_trit.size();
@@ -159,7 +153,7 @@ public class Pencipta extends Thread {
     }
     /**
     * Prosedur untuk memperbarui Dunia dan posisi Mahluk.
-    * @author Rio Chandra Rajagukguk/13514082
+    * @author Nur Latifah Ulfah/13514015
     */
     public void update() {
         while (!st_selesai) {
@@ -179,7 +173,7 @@ public class Pencipta extends Thread {
                     }
                     ++i;
                 }
-                if (st_banyakObjek == 1) {
+                if (st_banyakObjek < 50) {
                     delay(3);
 //                    st_selesai = true;
                     Ciptakan('b');
@@ -200,7 +194,7 @@ public class Pencipta extends Thread {
     * Prosedur untuk menambahkan nilai sel st_banyakYangMenempati.
     * @param x : x adalah representasi ordinat (baris) pada matriks dunia
     * @param y : y adalah representasi absis (kolom) pada matriks dunia
-    * @author Rio Chandra Rajagukguk/13514082
+    * @author Nur Latifah Ulfah/13514015
     */
     public synchronized void tambah1MatriksBanyakYangMenempati(final int x, final int y) {
         st_banyakYangMenempati[x][y]++;
@@ -209,7 +203,7 @@ public class Pencipta extends Thread {
     * Prosedur untuk mengurangi nilai sel st_banyakYangMenempati.
     * @param x : x adalah representasi ordinat (baris) pada matriks dunia
     * @param y : y adalah representasi absis (kolom) pada matriks dunia
-    * @author Rio Chandra Rajagukguk/13514082
+    * @author Nur Latifah Ulfah/13514015
     */
     public synchronized void kurang1MatriksBanyakYangMenempati(final int x, final int y) {
         st_banyakYangMenempati[x][y]--;
@@ -228,7 +222,7 @@ public class Pencipta extends Thread {
     /**
     * Prosedur untuk membaca peta pada file eksternal.
     * @param namaBerkas : parameter untuk membaca nama file yang akan dibaca
-    * @author Rio Chandra Rajagukguk/13514082
+    * @author Nur Latifah Ulfah/13514015
     */
     public void bacaPeta(final String namaBerkas) {
         String data;
@@ -265,7 +259,7 @@ public class Pencipta extends Thread {
 
     /**
     * Prosedur mengubah nilai elemen-elemen pada st_banyakYangMenempati menjadi 0.
-    * @author Rio Chandra Rajagukguk/13514082
+    * @author Nur Latifah Ulfah/13514015
     */
     public final synchronized void resetKe0MatriksBanyakYangMenempati() {
         for (int i = 0; i < BARIS; i++) {
@@ -278,7 +272,7 @@ public class Pencipta extends Thread {
     /**
     * Fungsi untuk mendapatkan jumlah Mahluk yang ada.
     * @return jumlah Mahluk yang ada di List of Mahluk
-    * @author Rio Chandra Rajagukguk/13514082
+    * @author Nur Latifah Ulfah/13514015
     */
     public synchronized int getBanyakMahluk() {
         int si = st_list.size();
@@ -291,7 +285,7 @@ public class Pencipta extends Thread {
     * @param y : representasi absis (kolom) pada matriks dunia
     * @return : Mengembalikan -1 untuk karakter '_' ,0 untuk karakter ';',
     * 1 untuk yang lainnya
-    * @author Rio Chandra Rajagukguk/13514082
+    * @author Nur Latifah Ulfah/13514015
     **/
     public int ambilSelPetaDunia(final int x, final int y) {
         return st_petaDunia[x][y];
@@ -301,7 +295,7 @@ public class Pencipta extends Thread {
     * Mengembalikan pointer Mahluk pada list ke i.
     * @param i : representasi indeks ke-i pada List
     * @return : Mengembalikan pointer Mahluk pada List indeks ke-i
-    * @author Rio Chandra Rajagukguk/13514082
+    * @author Nur Latifah Ulfah/13514015
     */
     public synchronized Mahluk getMahluk(final int i) {
         assert i < st_list.size() : i;
@@ -314,7 +308,7 @@ public class Pencipta extends Thread {
     * @param x : representasi ordinat (baris) pada matriks dunia
     * @param y : representasi absis (kolom) pada matriks dunia
     * @return : Mengembalikan matriks st_banyakYangMenempati sel x,y
-    * @author Rio Chandra Rajagukguk/13514082
+    * @author Nur Latifah Ulfah/13514015
     */
     public synchronized int getMatriksBanyakYangMenempati(final int x, final int y) {
         int n = st_banyakYangMenempati[x][y];
@@ -324,7 +318,7 @@ public class Pencipta extends Thread {
     /**
     * Fungsi untuk mengembalikan nilai st_selesai.
     * @return : Mengembalikan nilai st_selesai
-    * @author Rio Chandra Rajagukguk/13514082
+    * @author Nur Latifah Ulfah/13514015
     */
     public boolean getSelesai() {
         return st_selesai;
@@ -333,7 +327,7 @@ public class Pencipta extends Thread {
     /**
     * Fungsi untuk mengembalikan nilai st_banyakObjek.
     * @return : mengembalikan nilai st_banyakObjek
-    * @author Rio Chandra Rajagukguk/13514082
+    * @author Nur Latifah Ulfah/13514015
     */
     public int getBanyakObjek() {
         return st_banyakObjek;
@@ -342,7 +336,7 @@ public class Pencipta extends Thread {
     /**
     * Prosedur untuk memberikan nilai st_selesai.
     * @param b : variabel masukkan untuk st_selesai
-    * @author Rio Chandra Rajagukguk/13514082
+    * @author Nur Latifah Ulfah/13514015
     **/
     public void setSelesai(final boolean b) {
         st_selesai = b;
@@ -351,7 +345,7 @@ public class Pencipta extends Thread {
     /**
     * Prosedur untuk mematikan Mahluk pada List indeks ke-i.
     * @param i : i adalah indeks
-    * @author Martino Christanto Khuangga/13514084
+    * @author Hasna Nur Karimah/13514106
     */
     public synchronized void setMatiMahluk(final int i) {
         st_list.get(i).setUmur(0);
@@ -359,7 +353,7 @@ public class Pencipta extends Thread {
 
     /**
     * Prosedur untuk menghentikan aktivitas Dunia sementara.
-    * @author Rio Chandra Rajagukguk/13514082
+    * @author Nur Latifah Ulfah/13514015
     */
     public void pauseMahluk() {
         Mahluk.pause = !(Mahluk.pause);
@@ -368,7 +362,7 @@ public class Pencipta extends Thread {
     /**
     * Digunakan untuk konstruktor singleton pencipta.
     * @return pencipta yang telah diciptakan
-    * @author Verisky Mega Jaya/13514018
+    * @author Letivany Aldina/13514067
     */
     public static Pencipta getPencipta() {
         if (pencipta == null) {

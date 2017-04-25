@@ -75,7 +75,7 @@ public class AntarmukaSwing extends JPanel implements ActionListener {
   private Player player;
   /**
     * Konstruktor dunia singleton.
-    * @author Verisky Mega Jaya/13514018
+    * @author Letivany Aldina/13514067
   */
   private AntarmukaSwing() {
     dx = Pencipta.getPencipta();
@@ -110,7 +110,7 @@ public class AntarmukaSwing extends JPanel implements ActionListener {
 
   /**
     * Mengembalikan pointer ke singleton AntarmukaSwing.
-    * @author Verisky Mega Jaya/13514018
+    * @author Letivany Aldina/13514067
     * @return Mengembalikan pointer ke singleton AntarmukaSwing
     */
   public static AntarmukaSwing getAntarmukaSwing() {
@@ -126,7 +126,7 @@ public class AntarmukaSwing extends JPanel implements ActionListener {
     * @param x : x adalah representasi ordinat (baris) pada Matriks dunia
     * @param y : y adalah representasi absis (kolom) pada Matriks dunia
     * @return mengembalikan Mahluk yang berada di posisi X,Y
-    * @author Rio Chandra Rajagukguk/13514082
+    * @author Nur Latifah Ulfah/13514015
     */
   public Mahluk cariListDiPosisiXY(final int x, final int y) {
     int panjang = dx.getBanyakMahluk();
@@ -144,7 +144,7 @@ public class AntarmukaSwing extends JPanel implements ActionListener {
     * terdapat pada Pencipta.
     * @param g2 : g2 adalah pointer ke Graphics2D tempat menggambar matriks
     * yang dijelaskan sebelumnya
-    * @author Rio Chandra Rajagukguk/13514082
+    * @author Nur Latifah Ulfah/13514015
     */
   public void render(final Graphics2D g2) {
     for (int i = 0; i < BARIS; i++) {
@@ -194,12 +194,15 @@ public class AntarmukaSwing extends JPanel implements ActionListener {
     g2.setFont(font);
     g2.setColor(Color.WHITE);
     g2.drawString("SCORE: "+Integer.toString(player.getScore()),50,50);
+    if (player.getSelesai()) {
+        g2.drawString("GAME OVER",50,100);
+    }
   }
 
   /**
     * Override metode paint pada JPanel.
     * @param g : g adalah pointer ke Graphics tempat dilakukan rendering gambar
-    * @author Rio Chandra Rajagukguk/13514082
+    * @author Nur Latifah Ulfah/13514015
     */
   public void paint(final Graphics g) {
     super.paintComponent(g);
@@ -218,7 +221,7 @@ public class AntarmukaSwing extends JPanel implements ActionListener {
   /**
     * Override metode actionPerformed. Melakukan repaint gambar
     * @param e : e adalah ActionEvent yang terjadi saat melakukan repaint
-    * @author Rio Chandra Rajagukguk/13514082
+    * @author Nur Latifah Ulfah/13514015
     */
   public void actionPerformed(final ActionEvent e) {
     repaint();

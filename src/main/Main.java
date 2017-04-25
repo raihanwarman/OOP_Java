@@ -11,7 +11,7 @@ class Main {
     /**
       * Sebuah prosedur untuk menghentikan program selama waktu yang ditentukan.
       * @param lamaWaktu : parameter input untuk menentukan lama delay
-      * @author Rio Chandra Rajagukguk/13514082
+      * @author Nur Latifah Ulfah/13514015
     */
     public static void delay(final int lamaWaktu) {
         try {
@@ -27,7 +27,7 @@ class Main {
     /**
       * Prosedur aksi untuk memulai program.
       * @param namaBerkasPeta : nama file dari peta yang digunakan
-      * @author Martino Christanto Khuangga/13514084
+      * @author Hasna Nur Karimah/13514106
     */
     private static void mulai(final String namaBerkasPeta) {
         Pencipta p = Pencipta.getPencipta();
@@ -41,7 +41,7 @@ class Main {
     /**
       * Program utama.
       * @param args : argumen dari main program
-      * @author Rio Chandra Rajagukguk/13514084
+      * @author Nur Latifah Ulfah/13514015
     */
     public static void main(final String[] args) {
         mulai("res/peta1");

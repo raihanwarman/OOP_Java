@@ -38,7 +38,7 @@ public class Dunia extends Thread {
 
     /**
       * Konstruktor dunia singleton.
-      * @author Verisky Mega Jaya/13514018
+      * @author Letivany Aldina/13514067
     */
     private Dunia() {
     int layarW = 1120, layarH = 640;
@@ -59,7 +59,7 @@ public class Dunia extends Thread {
       * Sebuah prosedur untuk menghentikan.
       * program selama waktu yang ditentukan
       * @param lamaWaktu : parameter input untuk menentukan lama delay
-      * @author Rio Chandra Rajagukguk/13514082
+      * @author Nur Latifah Ulfah/13514015
     */
     public void delay(final int lamaWaktu) {
         try {
@@ -77,7 +77,7 @@ public class Dunia extends Thread {
       * @param x : x adalah representasi ordinat (baris) pada Matriks dunia
       * @param y : y adalah representasi absis (kolom) pada Matriks dunia
       * @return mengembalikan List semua Mahluk yang berada di posisi X,Y
-      * @author Martino Christanto Khuangga/13514084
+      * @author Hasna Nur Karimah/13514106
     */
     public ArrayList<Mahluk> cariSemuadiXY(final int x, final int y) {
         ArrayList<Mahluk> MahlukdiTempat = new ArrayList<Mahluk>();
@@ -98,7 +98,7 @@ public class Dunia extends Thread {
       * @param umur parameter untuk memasukkan nilai umur yang diinginkan
       * @return mengembalikan indeks Mahluk di posisi X,Y dengan umur tertentu
       * pada List of Mahluk (st_list)
-      * @author Martino Christanto Khuangga/13514084
+      * @author Hasna Nur Karimah/13514106
     */
     public int cariIndeksListDiPosisiXYdanUmur(final int x, final int y,
             final int umur) {
@@ -120,7 +120,7 @@ public class Dunia extends Thread {
       * @param x : x adalah semua mahluk di x,y
       * @return mengembalikan indeks Mahluk di posisi X,Y dengan umur tertentu
       * pada List of Mahluk (st_list)
-      * @author Martino Christanto Khuangga/13514084
+      * @author Hasna Nur Karimah/13514106
     */
     public int cariIndeksListKekuatanTertinggi(final int i, final int j,
             final ArrayList<Mahluk> x) {
@@ -139,7 +139,7 @@ public class Dunia extends Thread {
 
     /**
       * Melakukan update dunia(matriks) ke Layar dan melakukan cetak Matriks.
-      * @author Rio Chandra Rajagukguk/13514082
+      * @author Nur Latifah Ulfah/13514015
     */
     public synchronized void updateLayar() {
         int angkaDelay = 100;
@@ -157,7 +157,7 @@ public class Dunia extends Thread {
 
     /**
     *Mencetak matriks.
-    * @author Rio Chandra Rajagukguk/13514082
+    * @author Nur Latifah Ulfah/13514015
     */
     public synchronized final void cetakMatriks() {
         for (int i = 0; i < BARIS; i++) {
@@ -192,7 +192,7 @@ public class Dunia extends Thread {
 
     /**
     * Animasi game over.
-    * @author Rio Chandra Rajagukguk/13514082
+    * @author Nur Latifah Ulfah/13514015
     */
     public void gameOver() {
         //... kosong
@@ -201,7 +201,7 @@ public class Dunia extends Thread {
     /**
     * Digunakan untuk konstruktor singleton.
     * @return dunia yang sudah diciptakan
-    * @author Verisky Mega Jaya/13514018
+    * @author Letivany Aldina/13514067
     */
     public static Dunia getDunia() {
         if (dunia == null) {

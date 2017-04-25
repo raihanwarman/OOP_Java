@@ -61,7 +61,7 @@ public class Fish extends Hewan {
 
             posY += kecepatany + KOLOM;
             posY %= KOLOM;
-            delay(1000);
+            delay(880);
             while (pause) {
                 delay(10);
             }
@@ -83,11 +83,11 @@ public class Fish extends Hewan {
     public final void mati() {
         //CHECKSTYLE:OFF
         umur = 0;
-//        while (lamaMenujuMati > 0) {
-//            lamaMenujuMati--;
-//            symbol = Integer.toString(lamaMenujuMati).charAt(0);
-//            delay(100);
-//        }
+        while (lamaMenujuMati > 0) {
+            lamaMenujuMati--;
+            symbol = Integer.toString(lamaMenujuMati).charAt(0);
+            delay(50);
+        }
         posX = -1;
         posY = -1;
         selesai = true;

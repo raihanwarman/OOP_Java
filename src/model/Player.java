@@ -175,7 +175,7 @@ public class Player extends Mahluk {
         while (lamaMenujuMati > 0) {
             lamaMenujuMati--;
             symbol = Integer.toString(lamaMenujuMati).charAt(0);
-            delay(100);
+            delay(50);
         }
         posX = -1;
         posY = -1;

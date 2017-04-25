@@ -1,6 +1,6 @@
 package model;
 /**
-  * @author Rio Chandra Rajagukguk/13514082
+  * @author Nur Latifah Ulfah/13514015
 */
 public abstract class Mahluk extends Thread {
   /**

@@ -1,6 +1,6 @@
 package model;
 /**
-  * @author Martino Christanto Khuangga/13514084
+  * @author Hasna Nur Karimah/13514106
 */
 public class Manusia extends Mahluk {
     /**
@@ -139,7 +139,7 @@ public class Manusia extends Mahluk {
         while (lamaMenujuMati > 0) {
             lamaMenujuMati--;
             symbol = Integer.toString(lamaMenujuMati).charAt(0);
-            delay(100);
+            delay(50);
         }
         posX = -1;
         posY = -1;

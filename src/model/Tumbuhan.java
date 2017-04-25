@@ -1,6 +1,6 @@
 package model;
 /**
-  * @author Verisky Mega Jaya/13514018
+  * @author Letivany Aldina/13514067
 */
 public class Tumbuhan extends Mahluk {
     /**
