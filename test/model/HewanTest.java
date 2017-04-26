@@ -38,141 +38,141 @@ public class HewanTest {
     }
 
     /**
-     * Test of delay method, of class Hewan.
+     * Test of delay method, of class Animal.
      */
     @Test
     public void testDelay() {
         System.out.println("delay");
         int lamaWaktu = 0;
-        Hewan instance = new HewanImpl();
+        Animal instance = new HewanImpl();
         instance.delay(lamaWaktu);
     }
 
     /**
-     * Test of getUmur method, of class Hewan.
+     * Test of getUmur method, of class Animal.
      */
     @Test
     public void testGetUmur() {
         System.out.println("getUmur");
-        Hewan instance = new HewanImpl();
+        Animal instance = new HewanImpl();
         int expResult = 0;
         int result = instance.getUmur();
         assertEquals(expResult, result);
     }
 
     /**
-     * Test of setUmur method, of class Hewan.
+     * Test of setUmur method, of class Animal.
      */
     @Test
     public void testSetUmur() {
         System.out.println("setUmur");
         int u = 0;
-        Hewan instance = new HewanImpl();
+        Animal instance = new HewanImpl();
         instance.setUmur(u);
     }
 
     /**
-     * Test of getPositionX method, of class Hewan.
+     * Test of getPositionX method, of class Animal.
      */
     @Test
     public void testGetPositionX() {
         System.out.println("getPositionX");
-        Hewan instance = new HewanImpl();
+        Animal instance = new HewanImpl();
         boolean expResult = true;
         int result = instance.getPositionX();
         assertEquals(expResult, result >= 0 && result <= 40);
     }
 
     /**
-     * Test of getPositionY method, of class Hewan.
+     * Test of getPositionY method, of class Animal.
      */
     @Test
     public void testGetPositionY() {
         System.out.println("getPositionY");
-        Hewan instance = new HewanImpl();
+        Animal instance = new HewanImpl();
         boolean expResult = true;
         int result = instance.getPositionY();
         assertEquals(expResult, result >= 0 && result <= 70);
     }
 
     /**
-     * Test of getKekuatan method, of class Hewan.
+     * Test of getKekuatan method, of class Animal.
      */
     @Test
     public void testGetKekuatan() {
         System.out.println("getKekuatan");
-        Hewan instance = new HewanImpl();
+        Animal instance = new HewanImpl();
         int expResult = 0;
         int result = instance.getKekuatan();
         assertEquals(expResult, result);
     }
 
     /**
-     * Test of getSymbol method, of class Hewan.
+     * Test of getSymbol method, of class Animal.
      */
     @Test
     public void testGetSymbol() {
         System.out.println("getSymbol");
-        Hewan instance = new HewanImpl();
+        Animal instance = new HewanImpl();
         char expResult = ' ';
         char result = instance.getSymbol();
         assertEquals(expResult, result);
     }
 
     /**
-     * Test of setSelesai method, of class Hewan.
+     * Test of setSelesai method, of class Animal.
      */
     @Test
     public void testSetSelesai() {
         System.out.println("setSelesai");
         boolean b = false;
-        Hewan instance = new HewanImpl();
+        Animal instance = new HewanImpl();
         instance.setSelesai(b);
     }
 
     /**
-     * Test of getSelesai method, of class Hewan.
+     * Test of getSelesai method, of class Animal.
      */
     @Test
     public void testGetSelesai() {
         System.out.println("getSelesai");
-        Hewan instance = new HewanImpl();
+        Animal instance = new HewanImpl();
         boolean expResult = false;
         boolean result = instance.getSelesai();
         assertEquals(expResult, result);
     }
 
     /**
-     * Test of move method, of class Hewan.
+     * Test of move method, of class Animal.
      */
     @Test
     public void testMove() {
         System.out.println("move");
-        Hewan instance = new HewanImpl();
+        Animal instance = new HewanImpl();
         instance.move();
     }
 
     /**
-     * Test of mati method, of class Hewan.
+     * Test of mati method, of class Animal.
      */
     @Test
     public void testMati() {
         System.out.println("mati");
-        Hewan instance = new HewanImpl();
+        Animal instance = new HewanImpl();
         instance.mati();
     }
 
     /**
-     * Test of run method, of class Hewan.
+     * Test of run method, of class Animal.
      */
     @Test
     public void testRun() {
         System.out.println("run");
-        Hewan instance = new HewanImpl();
+        Animal instance = new HewanImpl();
         instance.run();
     }
 
-    public class HewanImpl extends Hewan {
+    public class HewanImpl extends Animal {
 
         public void delay(int lamaWaktu) {
         }

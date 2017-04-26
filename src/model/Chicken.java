@@ -2,7 +2,7 @@ package model;
 /**
    * @author Raihan Maulana Warman/13514076
 */
-public class Chicken extends Hewan {
+public class Chicken extends Animal {
     /**
       * variabel yang menyatakan besar kekuatan sementara.
       * dari seekor karnivor

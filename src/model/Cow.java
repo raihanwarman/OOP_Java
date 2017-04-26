@@ -2,7 +2,7 @@ package model;
 /**
    * @author Raihan Maulana Warman/13514076
 */
-public class Cow extends Hewan {
+public class Cow extends Animal {
     /**
       * Variabel yang menyatakan ketahanan Bird.
     */

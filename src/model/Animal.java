@@ -2,7 +2,7 @@ package model;
 /**
    * @author Raihan Maulana Warman/13514076
 */
-public abstract class Hewan extends Mahluk {
+public abstract class Animal extends Mahluk {
     /**
       * Sebuah prosedur untuk menghentikan program selama waktu yang ditentukan.
       * @param lamaWaktu : parameter input untuk menentukan lama delay
