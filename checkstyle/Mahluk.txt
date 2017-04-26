@@ -1,0 +1,6 @@
+Starting audit...
+[WARN] C:\OOP_Java\src\model\Mahluk.java:2: First sentence of Javadoc is incomplete (period is missing) or not present. [SummaryJavadoc]
+[WARN] C:\OOP_Java\src\model\Mahluk.java:5: 'CLASS_DEF' should be separated from previous statement. [EmptyLineSeparator]
+[WARN] C:\OOP_Java\src\model\Mahluk.java:71:36: Parameter name 'u' must match pattern '^[a-z][a-z0-9][a-zA-Z0-9]*$'. [ParameterName]
+[WARN] C:\OOP_Java\src\model\Mahluk.java:101:43: Parameter name 'b' must match pattern '^[a-z][a-z0-9][a-zA-Z0-9]*$'. [ParameterName]
+Audit done.

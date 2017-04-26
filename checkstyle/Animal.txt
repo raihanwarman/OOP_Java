@@ -1,0 +1,18 @@
+Starting audit...
+[WARN] C:\OOP_Java\src\model\Animal.java:2: First sentence of Javadoc is incomplete (period is missing) or not present. [SummaryJavadoc]
+[WARN] C:\OOP_Java\src\model\Animal.java:5: 'CLASS_DEF' should be separated from previous statement. [EmptyLineSeparator]
+[WARN] C:\OOP_Java\src\model\Animal.java:10: 'method def modifier' have incorrect indentation level 4, expected level should be 2. [Indentation]
+[WARN] C:\OOP_Java\src\model\Animal.java:16: 'method def modifier' have incorrect indentation level 4, expected level should be 2. [Indentation]
+[WARN] C:\OOP_Java\src\model\Animal.java:22: 'method def modifier' have incorrect indentation level 4, expected level should be 2. [Indentation]
+[WARN] C:\OOP_Java\src\model\Animal.java:22:38: Parameter name 'u' must match pattern '^[a-z][a-z0-9][a-zA-Z0-9]*$'. [ParameterName]
+[WARN] C:\OOP_Java\src\model\Animal.java:28: 'method def modifier' have incorrect indentation level 4, expected level should be 2. [Indentation]
+[WARN] C:\OOP_Java\src\model\Animal.java:34: 'method def modifier' have incorrect indentation level 4, expected level should be 2. [Indentation]
+[WARN] C:\OOP_Java\src\model\Animal.java:40: 'method def modifier' have incorrect indentation level 4, expected level should be 2. [Indentation]
+[WARN] C:\OOP_Java\src\model\Animal.java:46: 'method def modifier' have incorrect indentation level 4, expected level should be 2. [Indentation]
+[WARN] C:\OOP_Java\src\model\Animal.java:52: 'method def modifier' have incorrect indentation level 4, expected level should be 2. [Indentation]
+[WARN] C:\OOP_Java\src\model\Animal.java:52:45: Parameter name 'b' must match pattern '^[a-z][a-z0-9][a-zA-Z0-9]*$'. [ParameterName]
+[WARN] C:\OOP_Java\src\model\Animal.java:58: 'method def modifier' have incorrect indentation level 4, expected level should be 2. [Indentation]
+[WARN] C:\OOP_Java\src\model\Animal.java:63: 'method def modifier' have incorrect indentation level 4, expected level should be 2. [Indentation]
+[WARN] C:\OOP_Java\src\model\Animal.java:68: 'method def modifier' have incorrect indentation level 4, expected level should be 2. [Indentation]
+[WARN] C:\OOP_Java\src\model\Animal.java:73: 'method def modifier' have incorrect indentation level 4, expected level should be 2. [Indentation]
+Audit done.

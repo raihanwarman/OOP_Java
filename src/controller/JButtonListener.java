@@ -1,4 +1,5 @@
 package controller;
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -19,6 +20,7 @@ public class JButtonListener {
   private static final Player p = Player.getPlayer();
   private static final ImageIcon [] img = new ImageIcon[10];
   private static final JLabel[] label = new JLabel[10];
+  
   /**
    * Sebuah prosedur untuk menampilkan windows dari button.
    */
@@ -65,8 +67,7 @@ public class JButtonListener {
     img[8] = new ImageIcon("res/elephant.png");
     img[9] = new ImageIcon("res/p116.png");
     
-    
-    for(int i=0; i<10; i++){
+    for(int i = 0; i < 10; i++){
         label[i] = new JLabel(img[i]);
     }
     JLabel target = new JLabel("Target");
