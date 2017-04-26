@@ -12,8 +12,6 @@ public class JButtonListener {
    * Sebuah variabel untuk menampilkan frame (windows utama).
    */
   private static JFrame frame;
-
-  private static JLabel score;
   /**
    * Pencipta.
    */
@@ -26,10 +24,6 @@ public class JButtonListener {
    */
   public static void displayJFrame() {
     frame = new JFrame("Aptuyu");
-//    JPanel panel1 = new JPanel();
-//    JPanel panel2 = new JPanel();
-//    JPanel panel3 = new JPanel();
-//    JPanel panel4 = new JPanel();
     
     // create our jbutton
     JButton buttonU = new JButton("Up");
@@ -59,13 +53,6 @@ public class JButtonListener {
         pt.pauseMahluk();
     });
 
-    // put the button on the frame
-    frame.getContentPane().setLayout(new FlowLayout());
-    frame.add(buttonU);
-    frame.add(buttonD);
-    frame.add(buttonL);
-    frame.add(buttonR);
-    frame.add(buttonPause);
     //Legenda
     img[0] = new ImageIcon("res/bird.png");
     img[1] = new ImageIcon("res/chicken.png");
@@ -83,24 +70,101 @@ public class JButtonListener {
         label[i] = new JLabel(img[i]);
     }
     JLabel target = new JLabel("Target");
-    frame.add(target);
-    for(int i=0; i<6; i++){
-        frame.add(label[i]);
-    }
-    
     JLabel musuh = new JLabel("Musuh");
-    frame.add(musuh);
-    for(int i=6; i<9; i++){
-        frame.add(label[i]);
-    }
-    
     JLabel pemain = new JLabel("Player");
-    frame.add(pemain);
-    frame.add(label[9]);
+    
+    //Layout manager
+    GroupLayout layout = new GroupLayout(frame.getContentPane());
+    frame.getContentPane().setLayout(layout);
+    
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(target)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(label[0])
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(label[1])
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(label[2])
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(label[3])
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(label[4])
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(label[5]))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(pemain)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(label[9]))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(musuh)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(label[6])
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(label[7])
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(label[8]))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(68, 68, 68)
+                        .addComponent(buttonU))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(60, 60, 60)
+                        .addComponent(buttonD))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(buttonPause, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(buttonL)
+                            .addGap(72, 72, 72)
+                            .addComponent(buttonR))))
+                .addContainerGap(29, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(buttonU)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(buttonL)
+                    .addComponent(buttonR))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(buttonD)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(buttonPause)
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(target)
+                            .addComponent(label[0])
+                            .addComponent(label[1])
+                            .addComponent(label[2])
+                            .addComponent(label[3])
+                            .addComponent(label[4])
+                            .addComponent(label[5]))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(musuh)
+                            .addComponent(label[6])
+                            .addComponent(label[7])
+                            .addComponent(label[8]))
+                        .addGap(0, 30, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(pemain)
+                            .addComponent(label[9]))
+                        .addContainerGap())))
+        );
+    
     
     // set up the jframe, then display it
     frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-    frame.setPreferredSize(new Dimension(300, 200));
+    frame.setPreferredSize(new Dimension(250, 270));
     frame.pack();
     frame.setLocationRelativeTo(null);
     frame.setVisible(true);
